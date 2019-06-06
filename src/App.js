@@ -1,23 +1,45 @@
 import React from 'react';
-import CounterButton from "./components/CounterButton";
-import SpecialTextBox from "./components/SpecialTextBox";
-import Counter from "./components/Counter";
-import SpecialText from "./components/SpecialText";
-import UserButtons from "./components/UserButtons";
-import Thermostat from "./components/Thermostat";
-import Users from "./components/Users";
-import ChangeTemperature from "./components/ChangeTemperature";
+
+import CounterButton from "./containers/CounterContainerRead";
+import Counter from "./containers/CounterContainer";
+
+import SpecialTextBox from "./containers/SpecialTextContainerRead";
+import SpecialText from "./containers/SpecialTextContainer";
+
+import UserButtons from "./containers/UsersContainerRead";
+import Users from "./containers/UsersContainer";
+import SortUsers from "./containers/SortUsersContainerRead";
+
+import Thermostat from "./containers/ThermostatContainer";
+import ChangeTemperature from "./containers/ThermostatContainerRead";
+
 import VideoPlayer from "./components/VideoPlayer";
 import VideoTextBox from "./components/VideoTextBox";
-import CurrentCity from "./components/CurrentCity";
-import CityDropDown from "./components/CityDropDown";
-import SearchTextBox from "./components/SearchTextBox";
-import SortUsers from "./components/SortUsers";
+
+import CurrentCity from "./containers/CurrentCityContainer";
+import CityDropDown from "./containers/CurrentCityContainerRead";
+
+import SearchTextBox from "./containers/SearchTextRead";
+
 import ScaleVideo from "./components/ScaleVideo";
+
 import Modal from "./components/Modal";
 import ShowModal from "./components/ShowModal";
 
+import store from './store'
+
+
 function App() {
+  //fetch call goes here
+  // componentDidMount(){
+  //   fetch("")
+  //   .then(r=>r.json())
+  //   .then (users=>{
+  //     let message= {value:users, type:'USERS_LOADED'}
+  //     store.dispatch(message)
+  //   })
+  // }
+
   return (
       <div className="App">
         <div className="container">
@@ -53,7 +75,7 @@ function App() {
           <VideoPlayer />
           <br />
           
-          
+
         </div>
         <div className="container">
           <Users />

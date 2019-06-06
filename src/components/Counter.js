@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Counter(props) {
+export default function Counter(props) {
   return (
       <div>
         Counter: {props.count}
       </div>
   );
 }
-export default Counter;
